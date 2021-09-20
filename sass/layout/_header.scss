@@ -1,0 +1,186 @@
+.header {
+  width: 100vw;
+  height: 74.9rem;
+
+  background-image: linear-gradient(
+                  to right,
+                  rgba($color-primary, 0.8),
+                  rgba($color-secondary-dark, 0.8)
+  ), url("/img/hf.jpg");
+  background-size: cover;
+  //background-attachment: fixed;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__left {
+    width: 50%;
+    height: 100%;
+    position: relative;
+
+    @include respond(tab-land){
+      width: 100%;
+    }
+  }
+
+  &__right {
+    width: 40%;
+    margin: 2rem;
+    overflow: hidden;
+    //background-color: orangered;
+    position: relative;
+
+    @include respond(tab-land){
+      display: none;
+    }
+
+    //todo rename this class
+    [class^="header__core"] {
+      position: absolute;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 7.5rem;
+      background-color: $color-white;
+      box-shadow: 0 1rem 2rem rgba($color-black, .5);
+      transition: all .3s ease-in-out;
+      z-index: 100;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 8rem;
+      text-align: center;
+
+      i {
+        color: $color-primary;
+        font-size: 8rem;
+
+        &::before {
+          font-size: inherit;
+          margin: 0 !important;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        box-shadow: 0 1rem 2rem rgba($color-black, .7);
+      }
+
+      &:hover ~ .header__logo {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__text {
+    //display: inline-block;
+    @include absCenter;
+  }
+
+  &__core {
+    &--1 {
+      top: 3.9rem;
+      left: 21.8rem;
+
+      &:hover ~ .text-circle--1 {
+        @include circlePop;
+      }
+
+      i {
+        transform: translateX(1.3rem);
+      }
+    }
+
+    &--2 {
+      top: 16.3rem;
+      left: 3.8rem;
+
+      &:hover ~ .text-circle--2 {
+        @include circlePop;
+      }
+    }
+
+    &--3 {
+      top: 39.3rem;
+      left: 3.8rem;
+
+      &:hover ~ .text-circle--3 {
+        @include circlePop;
+      }
+    }
+
+    &--4 {
+      top: 51.7rem;
+      left: 21.8rem;
+
+      &:hover ~ .text-circle--4 {
+        @include circlePop;
+      }
+    }
+  }
+
+  &__logo {
+    width: 28rem;
+    height: 28rem;
+    border-radius: 14rem;
+
+    //background-color: $color-white;
+    @include absCenter;
+    left: 32.2rem;
+    transition: all .3s ease-in;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    //@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    //  -webkit-clip-path: circle(50% at 50% 50%);
+    //  clip-path: circle(50% at 50% 50%);
+    //  -webkit-shape-outside: circle(50% at 50% 50%);
+    //  shape-outside: circle(50% at 50% 50%);
+    //  border-radius: none;
+    //}
+  }
+
+  &__img {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  &__text-circle {
+    background-color: $color-white;
+    height: 0;
+    width: 0;
+    border-radius: 14rem;
+    @include absCenter;
+    top: 120%;
+    left: $circle-left;
+    opacity: 0;
+    transition: all .4s ease-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.text-circle {
+
+  &__header {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__text {
+    padding: 0 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+

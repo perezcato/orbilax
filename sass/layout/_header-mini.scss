@@ -1,0 +1,14 @@
+.header-mini {
+  width: 100vw;
+  height: 45rem;
+
+  background-image: linear-gradient(
+                  65deg,
+                  rgba($color-primary, .8),
+                  rgba($color-secondary-dark, .7)
+  ), url("../img/tech-back.jpg");
+  background-size: cover;
+  background-position-y: 40%;
+
+  position: relative;
+}

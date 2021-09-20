@@ -1,0 +1,43 @@
+.technologies {
+  overflow-x: hidden;
+  position: relative;
+  //background-color: $default-back;
+
+
+  background-image: linear-gradient(
+                  to left bottom,
+                  rgba($color-white, 0.8),
+                  rgba($color-white, 0.8)
+  ),
+  url("/img/wireframe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &__content {
+    padding: 4rem 5rem;
+    text-align: center;
+  }
+
+  &__watch {
+    top: 10rem;
+    left: 10rem;
+
+    @include respond(l-phone){
+      top: 3rem;
+      left: 15rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__discuss {
+    margin: 0 auto;
+  }
+}

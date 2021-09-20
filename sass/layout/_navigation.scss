@@ -1,0 +1,157 @@
+.navigation {
+  display: block;
+  height: 8rem;
+
+  position: relative;
+  //background-color: orangered;
+
+  //@include respond(phone){
+  //  height: 15rem;
+  //}
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+
+    //&--left,
+    //&--right {
+    //  display: inline-block;
+    //}
+    &--left {
+      @include respond(phone) {
+        margin-right: 2rem;
+      }
+    }
+
+    &--right {
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+
+  }
+
+  &__logo {
+
+    &--text {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    &--img {
+      width: 15rem;
+
+      @include respond(g-tab) {
+        width: 10rem;
+        height: auto;
+      }
+    }
+  }
+
+  &__list {
+    display: inline-block;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-tertiary;
+
+    padding: 1.5rem;
+
+    //border-bottom: 5px solid transparent;
+    transition: all .2s ease-in;
+
+    &:hover {
+      //border-bottom: 5px solid $color-secondary-dark;
+      transform: scale(1.2);
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &-phone {
+    display: none;
+    width: 5rem;
+    font-size: 3rem;
+    margin-right: 1rem;
+    color: $color-primary;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+
+    @include respond(tab-port) {
+      display: inline-block;
+    }
+
+    &__content {
+      display: none;
+      transition: all .4s ease-in-out;
+
+      background-color: $color-primary;
+      width: 100vw;
+      position: absolute;
+      left: 0;
+      top: 8rem;
+      z-index: 1000;
+    }
+
+    &__item {
+      display: block;
+      height: 100%;
+
+      font-size: 2rem;
+      //font-weight: 600;
+
+      padding: 1.5rem;
+
+      &:not(:last-child) {
+        //border-bottom: 1px solid $color-white;
+      }
+    }
+
+    &__link {
+      &,
+      &:link,
+      &:visited {
+        display: block;
+        padding: .2rem ;
+        text-align: center;
+        color: $color-white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+//used to make phone navigation visible;
+.show {
+  display: block !important;
+  //max-height: 30rem;
+}
+
+.show-items{
+  display: block;
+}
+
+.selected {
+  color: $color-secondary-dark !important;
+}
+.selected2 {
+  color: $color-secondary-light !important;
+}

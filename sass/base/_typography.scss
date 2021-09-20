@@ -1,0 +1,51 @@
+body {
+  font-family: 'Abel', sans-serif;
+  font-weight: 400;
+  color: $color-tertiary;
+}
+
+.heading-primary {
+  font-size: 4rem;
+  color: $color-white;
+
+  &--main {
+    display: block;
+    font-size: 8rem;
+  }
+
+  &--sub {
+    display: block;
+    font-size: inherit;
+    font-weight: normal;
+    text-align: left;
+  }
+}
+
+.heading-secondary {
+  font-size: 5rem;
+  font-weight: normal;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  text-align: justify-all;
+  //margin: 0 auto;
+
+  @include respond(phone) {
+    text-align: center;
+  }
+
+  &--main {
+    //color: $color-secondary-dark;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &--sub {
+    font-size: inherit;
+    font-weight: normal;
+    text-align: justify;
+  }
+}

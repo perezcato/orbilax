@@ -1,0 +1,33 @@
+$color-primary: #512DA8;
+$color-primary-dark: #512DA8;
+$color-primary-light: #B39DDB;
+
+$color-secondary-light: #F7717D;
+$color-secondary-dark: #EB5160;
+
+$color-tertiary: #264653;
+$color-tertiary-dark: #01579B;
+$color-tertiary-light: #03A9F4;
+
+$color-offset: #2E1F27;
+$color-offset-2: #71F79F;
+$color-offset-3: #2E1F27;
+
+$color-white: #FAFAFA;
+$color-white-dirty: #E0E0E0;
+
+$color-black: #212121;
+
+$circle-left: 32.2rem;
+$circle-top: 50%;
+$circle-dim: 28rem;
+
+//defaults
+$default-width: 100rem;
+$default-back: lighten($color-primary, 55%);
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 6rem;
+$gutter-vertical-small: 4rem;
+$gutter-horizontal: 6rem;

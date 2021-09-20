@@ -1,0 +1,77 @@
+.sleek-card {
+  height: 35rem;
+  background-color: $color-white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 .5rem .5rem rgba($color-black, .3);
+
+  @include respond(tab-land) {
+    height: 42rem;
+  }
+
+  &__icon {
+    height: 17.5rem; //missing 4 rem
+    color: $color-white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 9rem;
+    transition: all .2s ease-out;
+
+    &>i::before {
+      font-size: inherit;
+    }
+
+    &--primary {
+      background-color: $color-primary;
+    }
+
+    &--primary2 {
+      background-color: darken($color-primary, 20%);
+    }
+
+    &--secondary {
+      background-color: $color-secondary-dark;
+    }
+
+    &--secondary2 {
+      background-color: darken($color-secondary-dark, 20%);
+    }
+
+    &--tertiary {
+      background-color: $color-tertiary;
+    }
+
+    &--tertiary2 {
+      background-color: darken($color-tertiary, 10%);
+    }
+
+  }
+
+  &__content {
+    padding: 1.5rem 2rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    height: 10.4rem;
+  }
+
+  &:hover &__icon{
+    font-size: 5rem;
+    height: 10.5rem;
+
+    @include respond(tab-land) {
+      font-size: 9rem;
+      height: 17.5rem;
+    }
+  }
+}

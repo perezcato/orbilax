@@ -1,0 +1,63 @@
+.form {
+
+  &__set {
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    label {
+      display: none;
+    }
+  }
+
+  &__input {
+    height: 5rem;
+  }
+
+  &__input,
+  &__area{
+    display: block;
+    width: 90%;
+    border-radius: 3px;
+
+    padding: 0 2rem;
+
+    margin: 0 auto;
+
+    outline: none;
+    border: none;
+
+    font: inherit;
+    font-size: 2rem;
+
+    border-bottom: 2px solid $color-secondary-light;
+
+    transition: all .3s ease-in-out;
+
+    background-color: rgba(#fff, 0.8);
+
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    &:focus {
+      border-bottom: 2px solid $color-primary;
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, .1);
+    }
+
+    &:focus:invalid {
+      border: 1px solid $color-secondary-dark;
+    }
+
+    &::-webkit-input-placeholder {
+      color: gray;
+    }
+  }
+
+  &__area {
+    padding: 2rem 2rem;
+  }
+}

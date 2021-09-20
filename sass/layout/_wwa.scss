@@ -1,0 +1,18 @@
+.wwa {
+  padding: 4rem 5rem;
+  background-color: $default-back;
+
+
+
+  &__content {
+    font-size: 2.5rem;
+    max-width: $default-width;
+    margin: 0 auto;
+    text-align: justify;
+
+    @include respond(tab-port) {
+      max-width: 50rem;
+
+    }
+  }
+}

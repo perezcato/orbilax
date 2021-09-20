@@ -1,0 +1,127 @@
+.listy {
+  position: relative;
+  width: 66rem;
+  height: 25rem;
+  z-index: 1000;
+
+  @include respond(l-phone) {
+    width: 30rem;
+    height: 39rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 1000;
+
+
+
+    &--main {
+      width: 20rem;
+      height: 20rem;
+      top: 0;
+      left: 0;
+
+      @include respond(l-phone) {
+        width: 10rem;
+        height: 10rem;
+        left: 10rem;
+      }
+    }
+
+    &--sub {
+      width: 12rem;
+      height: 12rem;
+      top: 15rem;
+      left: 18rem;
+
+      @include respond(l-phone) {
+        width: 6rem;
+        height: 6rem;
+        top: 1rem;
+        left: 9rem;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+
+    width: 20rem;
+    height: 15rem;
+    border-radius: 3px;
+    //background-image: linear-gradient(to left, $color-secondary-light, $color-secondary-dark);
+    background-color: darken($color-primary, 30%);
+
+    text-transform: uppercase;
+    font-size: 3rem;
+
+    position: absolute;
+    top: 10rem;
+    left: 18rem;
+    z-index: 900;
+
+    @include respond(l-phone) {
+      left: 4.5rem;
+      top: 7rem;
+    }
+  }
+
+  &__content {
+    min-height: 10rem;
+    width: 30rem;
+    background-color: $color-white;
+    box-shadow: 0 .5rem .5rem rgba($color-black, .3);
+    position: absolute;
+    left: 35rem;
+    top: 5rem;
+    border-radius: 3px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+
+    @include respond(l-phone) {
+      left: 0rem;
+      top: 20rem;
+    }
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+    list-style: none;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    display: block;
+    border: 1px solid $color-tertiary;
+    border-radius: 3px;
+    padding: .5rem;
+    width: 15rem;
+
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 2rem;
+      color: $color-tertiary;
+    }
+  }
+}
